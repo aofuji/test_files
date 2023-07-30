@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>teste</h3>
+    <script>
+
+
+        fetch('https://api.github.com/repos/aofuji/test_files/contents')
+        .then((response) => {
+            return response.json()
+        }).then((res) => {
+            console.log(res)
+        })
+        fetch('https://api.github.com/repos/aofuji/test_files/readme/pasta1')
+        .then((response) => {
+            return response.json()
+        }).then((res) => {
+            console.log(res)
+        })
+
+        fetch('https://raw.githubusercontent.com/aofuji/test_files/main/test2.html')
+        .then((response) => {
+           return  response.text()
+        })
+        .then((res) => {
+            console.log(res)
+        })
+    </script>
+</body>
+</html>
